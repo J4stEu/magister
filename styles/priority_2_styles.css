@@ -1,0 +1,192 @@
+/*default styles*/
+* {
+  margin: 0px;
+  padding: 0px;
+  outline: none;
+  text-decoration: none;
+  list-style-type: none;
+  overflow: hidden;
+  font-family: 'Roboto Slab', serif;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+i {
+  padding: 2px;
+}
+
+#content_1 .content_title {
+  bottom: 60px;
+}
+
+/*general content styles*/
+#all_themes_conteiner, #wanted_themes_conteiner, #choose_theme_conteiner, #choosed_theme_conteiner {
+  position: relative;
+  width: 800px;
+  height: 330px;
+  overflow: visible;
+}
+
+.all_themes_type_conteiner .from_themes, .wanted_themes .from_themes, .choose_theme .from_themes, .choosed_theme .from_themes {
+  width: calc(100% - 55px);
+}
+
+.wanted_themes_title, .choose_theme_title, .choosed_theme_title {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: dimgray;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+/*content 1 styles*/
+.themes_result {
+  display: none;
+}
+
+.all_themes_footer {
+  position: relative;
+  margin: 5px auto;
+  width: calc(100% - 10px);
+  height: 52px;
+  background: rgba(255, 154, 64, 0.5);
+  border-radius: 15px 15px 15px 15px;
+}
+
+.all_themes_footer i {
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.all_themes_footer i:hover {
+  color: #FF9A40 !important;
+}
+
+.all_themes_footer i.im-magnifier:hover {
+  color: #6d89d5 !important;
+}
+
+.all_themes_search {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  overflow: visible;
+}
+
+.all_themes_search input {
+  width: 300px;
+  height: 30px;
+  padding-left: 5px;
+  border: 2px solid rgba(0, 0, 0, 0);
+  border-radius: 10px;
+  -webkit-transition: border 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: border 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.all_themes_search input::-webkit-input-placeholder {
+  text-transform: capitalize;
+}
+
+.all_themes_search input:focus {
+  border: 2px solid #6d89d5;
+}
+
+.all_themes_search i {
+  position: fixed;
+  left: calc(100% + 5px);
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  cursor: pointer;
+  color: dimgray;
+}
+
+.all_themes_search i:last-child {
+  left: calc(100% + 35px);
+  display: none;
+}
+
+.content_themes_settings {
+  position: absolute;
+  left: 30px;
+  bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.content_themes_settings ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 5px;
+}
+
+.content_themes_settings ul li {
+  cursor: pointer;
+  padding: 0 5px 0 5px;
+}
+
+.content_themes_settings ul li:first-child {
+  color: #66e275;
+}
+
+.content_themes_settings ul:last-child #sort_way i {
+  font-size: 1em;
+  color: #66e275;
+}
+
+#wanted_themes_conteiner {
+  display: none;
+}
+
+#wanted_themes_conteiner i.im-x-mark-circle {
+  display: none;
+}
+
+.wanted_themes_footer {
+  position: relative;
+  margin: 5px auto;
+  width: calc(100% - 10px);
+  height: 52px;
+  background: rgba(255, 154, 64, 0.5);
+  border-radius: 15px 15px 15px 15px;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.wanted_themes_title span {
+  text-decoration: none;
+}
+
+/*content 2 styles*/
+#choosed_theme_conteiner .from_themes_priority_1_download {
+  background: rgba(255, 154, 64, 0.5);
+  width: 100%;
+}
+
+#choosed_theme_conteiner .from_themes_priority_1_download a {
+  color: #FF9A40;
+}
+
+.choose_theme_footer, .choosed_theme_footer {
+  position: relative;
+  margin: 5px auto;
+  width: calc(100% - 15px);
+  height: 52px;
+  background: rgba(255, 154, 64, 0.5);
+  border-radius: 15px 15px 15px 15px;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.from_themes_intro i.im-x-mark-circle {
+  display: none;
+}
+/*# sourceMappingURL=priority_2_styles.css.map */

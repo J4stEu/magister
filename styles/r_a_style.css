@@ -1,0 +1,418 @@
+/*default styles*/
+* {
+  margin: 0px;
+  padding: 0px;
+  outline: none;
+  text-decoration: none;
+  list-style-type: none;
+  overflow: hidden;
+  font-family: 'Roboto Slab', serif;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+i {
+  padding: 2px;
+}
+
+/*panels styles*/
+#r_a {
+  width: 100vw;
+  height: 100vh;
+}
+
+.form_conteiner {
+  width: 100%;
+  height: 100%;
+  -webkit-perspective: 500px;
+          perspective: 500px;
+  background: linear-gradient(-45deg, #FF9A40, #6d89d5, #66e275);
+  background-size: 400% 400%;
+  -webkit-animation: background_change 20s ease-in-out infinite;
+          animation: background_change 20s ease-in-out infinite;
+}
+
+@-webkit-keyframes background_change {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+@keyframes background_change {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+.form_panel {
+  position: absolute;
+  width: 630px;
+  height: 450px;
+  border-radius: 50px;
+  margin: 0 auto;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-box-shadow: 0px 13px 34px 0px rgba(0, 0, 0, 0.35);
+          box-shadow: 0px 13px 34px 0px rgba(0, 0, 0, 0.35);
+  background: white;
+  text-align: center;
+  z-index: 1;
+}
+
+.form_panel .panel_button {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  padding: 4px;
+  cursor: pointer;
+}
+
+.form_panel .panel_button span {
+  font-size: 1.1em;
+  color: #FF9A40;
+  border-bottom: 2px solid #6d89d5;
+  padding: 2px;
+  text-transform: uppercase;
+}
+
+#panel_2 {
+  display: none;
+  opacity: 0;
+}
+
+.panel_title {
+  position: absolute;
+  top: 0;
+  height: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 100%;
+  border-bottom: 2px solid #6D89D5;
+  background: rgba(109, 137, 213, 0.5);
+  border-radius: 50px 50px 0 0;
+}
+
+.panel_title i {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 1.5em;
+  color: #6D89D5;
+  padding: 5px;
+}
+
+.panel_title i.im-link {
+  font-size: 2.5em;
+}
+
+.hide_conteiner {
+  position: absolute;
+  width: calc(100% - 20px);
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  overflow: visible;
+  padding: 0 10px;
+}
+
+.hide_conteiner div {
+  position: relative;
+  margin-top: 40px;
+  width: auto;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+.hide_conteiner div:first-child, .hide_conteiner div:last-child {
+  margin-top: 0;
+}
+
+.hide_conteiner input {
+  width: 450px;
+  height: 45px;
+  padding-left: 50px;
+  background: rgba(255, 154, 64, 0.5);
+  border: 2px solid rgba(0, 0, 0, 0);
+  border-radius: 25px;
+  -webkit-transition: border 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: border 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.hide_conteiner input:focus {
+  border: 2px solid #6D89D5;
+}
+
+.hide_conteiner .im-mail, .hide_conteiner .im-user-circle, .hide_conteiner .im-key, .hide_conteiner .im-hashtag {
+  position: absolute;
+  z-index: 1;
+  left: 10px;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  font-size: 1.5em;
+  color: #6D89D5;
+  padding: 5px;
+}
+
+/*panels controler styles*/
+#r_a_change {
+  position: absolute;
+  width: 80px;
+  height: 40px;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 13px 34px 0px;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 13px 34px 0px;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  border-radius: 20px;
+  padding: 1px;
+  cursor: pointer;
+  background: #FF9A40;
+  overflow: visible;
+  z-index: 1;
+}
+
+#r_a_change i {
+  position: absolute;
+  bottom: -1px;
+  font-size: 2.5em;
+  border-radius: 50%;
+  opacity: 0.6;
+}
+
+#r_a_change .im-angle-right-circle {
+  opacity: 0;
+}
+
+#r_a_change .im-check-mark-circle {
+  display: none;
+}
+
+#r_a_change:hover .im-angle-right-circle {
+  opacity: 0.6;
+}
+
+#r_a_change:hover .circle_control {
+  opacity: 0;
+}
+
+#r_a_change p {
+  position: absolute;
+  color: dimgray;
+  opacity: 0;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#r_a_change:hover .reg_alert {
+  opacity: 1;
+  right: 120%;
+}
+
+#r_a_change:hover .auth_alert {
+  opacity: 1;
+  left: 120%;
+}
+
+.reg_alert {
+  right: 100%;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+.auth_alert {
+  left: 100%;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+#r_a_change_mobile {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  cursor: pointer;
+  z-index: 1;
+  display: none;
+}
+
+.r_a_alert {
+  color: black;
+  white-space: nowrap;
+}
+
+.r_a_alert span {
+  color: dimgray;
+  -webkit-transition: color 1.5s ease;
+  transition: color 1.5s ease;
+}
+
+.r_a_alert span:first-child {
+  color: #FF9A40;
+}
+
+/*question styles*/
+#q_widnow {
+  position: absolute;
+  width: 600px;
+  right: 15px;
+  bottom: 15px;
+  z-index: auto;
+}
+
+#q_widnow .im-question, #q_widnow .im-x-mark-circle {
+  position: absolute;
+  right: 4px;
+  bottom: 4px;
+  z-index: 1;
+  font-size: 2em;
+  padding: 5px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+#q_widnow .im-question:hover, #q_widnow .im-x-mark-circle:hover {
+  opacity: 0.6;
+}
+
+#q_widnow .im-x-mark-circle {
+  display: none;
+}
+
+.q_window_text {
+  background: #FF9A40;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  padding: 15px 0 15px 0;
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.q_window_text p {
+  padding: 5px 15px 5px 15px;
+  cursor: auto;
+}
+
+.q_window_text p u {
+  text-decoration: underline;
+}
+
+.q_window_text p:hover {
+  background: rgba(109, 137, 213, 0.5);
+}
+
+/*creator styles*/
+#creator {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  z-index: auto;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+}
+
+#creator div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#creator div span {
+  padding: 0 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#creator div span i {
+  -webkit-transition: color 0.2s linear;
+  transition: color 0.2s linear;
+}
+
+#creator div span i.im-vk:hover {
+  color: #4c75a3;
+}
+
+#creator div span i.im-mail:hover {
+  color: #d54b3e;
+}
+
+#creator div span:last-child {
+  font-weight: bold;
+  font-size: 1em;
+  padding: 5px;
+}
+
+/*when registration is restricred*/
+.restricted_reg, .restricted_auth {
+  position: relative;
+  width: 100%;
+  background: rgba(213, 75, 62, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.restricted_reg span, .restricted_auth span {
+  font-weight: bold;
+  text-decoration: underline;
+  cursor: pointer;
+}
+/*# sourceMappingURL=r_a_style.css.map */
